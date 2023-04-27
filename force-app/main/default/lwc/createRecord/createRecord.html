@@ -1,0 +1,14 @@
+<template>
+ <lightning-card title="CREATE RECORD">
+   <form class="createForm">   
+        <lightning-input label="first Name" name="Name" onchange={inputhandle}></lightning-input>
+        <lightning-input label="lastname" name="Phone" onchange={inputhandle}></lightning-input>
+        <lightning-input label="Annual Revenue" name="AnnualRevenue" onchange={inputhandle}></lightning-input>
+      
+        <lightning-button label="save" onclick={savemethod} variant="brand"></lightning-button>
+   
+    </form>
+
+
+ </lightning-card>   
+</template>

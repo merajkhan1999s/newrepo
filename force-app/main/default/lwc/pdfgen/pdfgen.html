@@ -1,0 +1,45 @@
+<template>
+  
+    <div class="container" style=" background-color: white;
+    border-block-color: black;" >
+            <div >
+                <img src={image} style="height: 40px; width :150px"/>
+            </div>  
+            <div style="display: inline-block;
+            text-align: right;">
+                <div> INVOICE #MKMKM  {invoice.date}   </div> 
+                <div> FVOICE #MKMKM  {invoice.place}    </div> 
+                <div> INVO #MKMKM  {invoice.state}  </div> 
+   </div>
+<div>
+
+    <div>
+     <div> <strong>  NAME  </strong>   </div>
+     <div> <strong>  AMOUNT  </strong>   </div>
+    </div>
+
+
+ <template iterator:it={services}>
+<div key={it.value.name}>
+<div>{it.value.name}  </div>
+<div>{it.value.Amount}  </div>
+</div>
+ <div if:true={it.last} key={it.value.name}>
+<div> <strong>totalAmount : {totalamount} </strong></div>
+
+</div> 
+
+ </template>
+
+
+
+
+</div>
+
+
+
+    </div>
+    <lightning-button variant="brand" onclick={genratepdf} label="GENERATE PDF"></lightning-button>
+
+
+</template>

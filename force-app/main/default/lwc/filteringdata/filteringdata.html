@@ -1,0 +1,84 @@
+<template>
+  <lightning-card>
+
+    <lightning-layout>
+      <lightning-layout-item size="4" padding="around-small"> 
+<lightning-input type="search" label="SEARCH"  onkeyup={changekeyup}></lightning-input>
+
+</lightning-layout-item>
+
+<lightning-layout-item size="4" padding="around-small">
+<lightning-combobox
+label="FILTER BY"
+name="filt"
+value={filt}
+options={filterbyoptions}
+onchange={filterhandlet}
+
+>
+
+
+</lightning-combobox>
+
+</lightning-layout-item>
+<lightning-layout-item alignment-bump="left" size="3">
+  <lightning-combobox
+  label="SORT BY"
+  value={sorrt}
+  name="sorrt"
+  options={sortbyoptions}
+  onchange={sorthandler}
+  >
+ 
+  </lightning-combobox>
+
+
+</lightning-layout-item>
+
+
+</lightning-layout>
+
+<table class=slds-var-m-top_large>
+<thead>
+<tr>
+  <template for:each={heading} for:item="cc">
+<th key={cc}  style="border: 2px;
+border: solid #ddd;
+padding:8px;
+"> {cc}</th>
+</template>
+</tr>
+</thead>
+<tbody>
+<template for:each={filterdata} for:item="fd">  
+<tr key={fd.Id}>
+<td style="    border: 2px;
+border: solid #ddd;
+padding: 8px;
+text-align: left;"  >{fd.Id} </td>
+<td   style="    border: 2px;
+border: solid #ddd;
+padding: 8px;
+text-align: left;">{fd.Name} </td>
+<td style="    border: 2px;
+border: solid #ddd;
+padding: 8px;
+text-align: left;">{fd.Phone} </td>
+
+<td style="    border: 2px;
+border: solid #ddd;
+padding: 8px;
+text-align: left;">{fd.Industry} </td>
+</tr>
+
+
+</template>
+</tbody>
+
+</table>
+
+
+
+
+ </lightning-card>  
+</template>

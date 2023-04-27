@@ -1,0 +1,13 @@
+<template>
+    <lightning-card>
+    <template if:true={getdaata}>
+        <template for:each={getdaata} for:item="cc">
+            <div key={cc.Id}>
+                <p> NAME>>>{cc.Name} >>>type::{cc.mk} </p> </div>
+
+        </template>
+
+    </template>
+    {selected.mk}
+    </lightning-card>
+</template>

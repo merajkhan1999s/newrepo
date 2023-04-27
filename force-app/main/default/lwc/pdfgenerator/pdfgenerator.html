@@ -1,0 +1,41 @@
+<template>
+    
+<div class="container" style="background-color: white; padding:16px"  >
+<div >
+    <img src={image} style="height: 40px; width:150px"/>
+</div>
+<div   style="font-size: 10px; text-align-last: right;">
+      <div>INVOICE DATA #:{invoice.innvoiceNmber}             </div>
+      <div>INVOICE Due #:{invoice.invoicedue}             </div>
+      <div>INVOICE COMPANYNAME #:{invoice.companyName}             </div>
+
+</div>
+
+<div>
+            <div> {clientdata.client}</div>
+            <div> {clientdata.userName} </div>
+</div>
+
+
+<div  style="background: #eee;
+margin: 16px 0px;
+padding: 7px;">
+    <div style="text-align-last: left;"> <strong>service </strong> </div> 
+    <div style=" text-align-last:right;"> <strong>Amount </strong> </div>   
+</div>
+<template iterator:it={services} >
+<div key={it.value.name}>
+                  <div>{it.value.name}   </div>
+                  <div  style="text-align-last: right;">${it.value.amount}   </div>
+
+</div> 
+ <div if:true={it.last} key={it.value.name}>
+    <div style="text-align-last: right;"><strong> total Amount :$ {totalamount}</strong> </div> 
+
+
+</div>
+</template>
+</div>
+<lightning-button label="generate pdf" variant="brand" onclick={pdfhandle} ></lightning-button>
+
+</template>

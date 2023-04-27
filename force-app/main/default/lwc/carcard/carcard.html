@@ -1,0 +1,32 @@
+<template>
+ 
+
+    <template if:true={recordId}>
+      <lightning-card title={carname} icon-name="standard:apex_plugin">
+      <lightning-button-icon icon-name="utility:expand_alt" slot="actions" onclick={handlenavigation} title="CLICK HERE TO NAVIGATE THE DETAIL PAGE RECORD "></lightning-button-icon>
+      <lightning-button-icon icon-name="utility:close" slot="actions" onclick={handlenavigatio} title="CANCEL"></lightning-button-icon>
+        <img src={carpic} alt="car picture"/>
+        
+      <lightning-record-view-form onload={handlerecordloaded} record-id={recordId} object-api-name="car__c" density="compact">
+       <lightning-output-field field-name={name}></lightning-output-field>
+       <lightning-output-field field-name={control}></lightning-output-field>
+      
+       <lightning-output-field field-name={seat}></lightning-output-field>
+       <lightning-output-field field-name={make}></lightning-output-field>
+       <section> TECHNICAL ASSETS</section>
+      <lightning-output-field field-name={category}></lightning-output-field>
+      <lightning-output-field field-name={fuel}></lightning-output-field>
+  
+  
+      </lightning-record-view-form>
+    
+    </lightning-card>  
+
+
+    </template>
+    <template if:false={recordId}>
+
+      <c-carerrorcomponent></c-carerrorcomponent>
+    </template>
+
+</template>

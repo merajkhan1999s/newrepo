@@ -1,0 +1,38 @@
+<template>
+ <lightning-card>
+
+<lightning-combobox
+
+label="INDUSTRY PICKLIST"
+name="industry"
+value={seelct}
+onchange={handleinput}
+placeholder="select the values"
+options={optio}
+
+>
+</lightning-combobox>
+<strong> SELECTED OPTION IS :  {seelct} </strong><p></p>
+
+<lightning-combobox
+
+label="TYPE PICKLIST"
+name="type"
+value={seelcttype}
+onchange={handleinput1}
+placeholder="select the values"
+options={optio1}
+
+>
+</lightning-combobox>
+<strong> SELECTED OPTION IS :  {seelcttype} </strong>
+
+
+ </lightning-card> 
+ 
+ 
+
+
+
+ 
+</template>

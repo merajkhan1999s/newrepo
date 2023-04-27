@@ -1,0 +1,41 @@
+<template>
+  
+<template if:false={cardata}>
+  
+    <div class="slds-align_absolute-center">
+         
+<lightning-button variant="destructive"  class="slds-m-top_medium" label="SIMILAR CARS" onclick={handlesimilar}></lightning-button>
+
+    </div>
+
+</template>
+<div class="slds-m-top_medium"> 
+
+    <div class="slds-m-around_medium">
+<template if:true={cardata}>
+    <template for:each={cardata} for:item="aa" >
+        
+<lightning-layout vertical-align="center" key={aa.Id} >
+    
+    <lightning-layout-item >
+   
+   <img src={aa.Picture_URL__c} alt='car picture' class="car"/>
+  </lightning-layout-item>
+
+    <lightning-layout-item flexibility="grow"  class="slds-p-horizontal_small" >
+        <p> <strong>{aa.Name} </strong></p>
+    </lightning-layout-item>
+
+    <lightning-layout-item  >
+        <lightning-button label="SEE THE DETAIL"  data-id={aa.Id} onclick={handlecarrec}></lightning-button>
+    </lightning-layout-item>
+
+
+</lightning-layout>
+</template>
+</template>
+</div>
+</div>
+
+
+</template>

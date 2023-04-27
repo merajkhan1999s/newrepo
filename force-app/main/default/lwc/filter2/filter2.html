@@ -1,0 +1,56 @@
+<template>
+    <lightning-card>
+<div class="slds-var-m-around_medium">
+
+    <lightning-layout>
+
+        <lightning-layout-item size="2" padding="8">
+            <lightning-input type="search" label="search" onkeyup={searchhandler}></lightning-input>
+
+
+        </lightning-layout-item>
+        <lightning-layout-item size="3">
+<lightning-combobox
+options={col}
+onchange={combohandler}
+label="select category"
+>
+
+
+</lightning-combobox>
+
+        </lightning-layout-item>
+    </lightning-layout>
+    <table>
+
+<thead>
+<tr>
+    <template for:each={columns} for:item="a">
+    <th key={a.Id}>{a}</th>
+</template>
+</tr>
+</thead>
+
+<tbody>
+    <template if:true={filterdata} >
+        <template for:each={filterdata} for:item="aa">  
+<tr key={aa.Id}>
+    <td>{aa.Id}</td>
+    <td>{aa.Name}</td>
+    <td>{aa.Rating}</td>
+    <td>{aa.Phone}</td>
+</tr>
+</template>
+</template>
+</tbody>
+
+
+    </table>
+
+
+
+
+
+</div>
+    </lightning-card>
+</template>

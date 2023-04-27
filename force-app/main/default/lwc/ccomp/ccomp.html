@@ -1,0 +1,31 @@
+<template>
+    <lightning-card title="THIS IS CHILD">
+        <!-- child comp >> {valu} 
+        <p></p>
+   <div>NAME </div><strong>{valus.name}</strong> 
+   <div>age </div><strong>{valus.age}</strong>
+   <div>height</div><strong>{valus.height}</strong>
+<p></p> -->
+<!-- 
+   <strong> input value >.  {inp}</strong> -->
+   <!-- <strong>  from the child >> {vad}  </strong> -->
+  <lightning-button onclick={met} label="event call" variant="brand"></lightning-button>
+
+<template if:true={savem}>
+hello this is true or flase from child
+     
+</template>
+
+
+<lightning-button onclick={metd} label="event with detail" variant="brand"></lightning-button>
+
+
+<slot name="x"></slot>
+
+
+</lightning-card>
+
+    
+
+
+</template>

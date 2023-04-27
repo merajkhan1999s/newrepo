@@ -1,0 +1,25 @@
+<template>
+    <lightning-card>
+
+
+        <lightning-combobox
+    
+        label="chose the type"
+        name="type"
+        options={opt}
+        value={tyc}
+        onchange={handle}
+        ></lightning-combobox>
+        
+<template if:true={wir.data}>
+<template for:each={wir.data} for:item="cc">
+
+    <div key={cc.Id}>
+    <strong> NAME :</strong>{cc.Name}<p></p>
+    <strong> Type :</strong>{cc.Type} 
+    </div>
+
+</template>
+</template>
+</lightning-card>
+</template>

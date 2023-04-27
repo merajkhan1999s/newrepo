@@ -1,0 +1,16 @@
+<template>
+
+<lightning-card>
+    <lightning-record-edit-form id="recordViewForm"
+                record-id={recordId}
+                  onsubmit={onsubhandler}
+                object-api-name={objectApiName}>
+       
+        <lightning-input class="val" label="name" value={name} onchange={handleName}></lightning-input>
+        <lightning-input class="val1" label="phone" value={phone} onchange={handlePhone}></lightning-input>
+        <lightning-input class="val" value={rating} label="rating" onchange={handleRating}></lightning-input>
+       
+        <lightning-button type="submit" label="Update record" onclick={submithandler}></lightning-button>
+    </lightning-record-edit-form>
+</lightning-card>
+</template>

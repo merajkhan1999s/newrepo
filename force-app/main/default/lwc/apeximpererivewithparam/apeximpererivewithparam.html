@@ -1,0 +1,17 @@
+<template>
+    <lightning-card>
+<lightning-input type="search" label="search Account" value={acc} onchange={mett}></lightning-input>
+<template if:true={da}>
+    <template for:each={da} for:item="ss">
+
+        <div key={ss.Id} >
+<p> {ss.Name} </p>
+<p> {ss.Type} </p>
+
+        </div>
+    </template>
+</template>
+
+        
+    </lightning-card>
+</template>

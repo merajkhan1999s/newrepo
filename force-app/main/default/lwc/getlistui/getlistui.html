@@ -1,0 +1,29 @@
+<template>
+   <lightning-card>
+ 
+    <table>
+        <thead>
+            <tr>
+                <th>NAME</th>
+                <th>Phone</th>
+                <th> Type</th>
+            </tr>
+        </thead>
+        <tbody> 
+            
+<template for:each={accounts} for:item="cc">
+<tr key={cc.fields.Id.Value}>
+<td> {cc.fields.Name.value} </td>
+<td> {cc.fields.Phone.value} </td>
+<td> {cc.fields.Type.value} </td>
+
+</tr>
+      </template>   
+        </tbody>
+    </table>
+  <lightning-button label="next" onclick={nexthandle}></lightning-button></div>
+     <lightning-button label="previous" onclick={prevthandle}></lightning-button></div>
+</div>
+  <strong> {currentpage} </strong>
+   </lightning-card> 
+</template>

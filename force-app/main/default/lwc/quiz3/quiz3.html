@@ -1,0 +1,32 @@
+<template>
+    <lightning-card title="QUIZ 3">\
+        output is here >> {len}
+        <form> 
+       
+        <template for:each={myquestions} for:item="val">
+          <div key={val.Id}>     
+  <strong>   {val.Id} :{val.question}</strong> 
+   <div class="slds-grid">
+        <div class="slds-col slds-p-horizontal_medium">
+            <span>
+                <lightning-input type="radio" label={val.optoins.A} name={val.Id} value="A" onchange={changehandle}></lightning-input>
+                </span>
+        </div>
+        <div class="slds-col slds-p-horizontal_medium">
+              <span>
+                <lightning-input type="radio" name={val.Id} label={val.optoins.B} onchange={changehandle} value="B"></lightning-input>
+               </span>
+        </div>
+            </div>
+    </div>
+   </template>
+
+<lightning-button label="submit" type="submit" onclick={savemethod} disabled={succes}  >
+
+</lightning-button>
+<lightning-button label="submit"  onclick={savemethods}  >
+
+</lightning-button>
+</form>
+    </lightning-card>
+</template>

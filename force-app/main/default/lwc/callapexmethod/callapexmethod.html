@@ -1,0 +1,17 @@
+<template>
+  <lightning-card>
+
+<lightning-button label="get names from accounts" onclick={method}></lightning-button>
+
+<template if:true={acc}>
+    <template for:each={acc} for:item="xx">
+   <div key={xx.Id}>
+<p> NAME : {xx.Name}</p>
+
+   </div>
+
+    </template>
+
+</template>
+  </lightning-card>  
+</template>

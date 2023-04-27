@@ -1,0 +1,39 @@
+<template>
+<form> 
+    <lightning-card title="quiz app">
+        <template if:true={iseww}>
+
+            <div  class="demo-only" style="padding:0.5rem;background:#f7ca44">  <strong> correct answer {correctanswers} out of {myquestions.length} </strong> </div> 
+        </template>
+
+      
+        <template for:each={myquestions} for:item="ei">
+  <div key={ei.id} class="slds-p-around_small" > <strong>  {ei.id} - {ei.question}   </strong> 
+<ul>  
+    <div class="slds-grid slds-gutters">
+        <div class="slds-col">
+     <input  type="radio" name={ei.id} value="a" onchange={optionhandler}/>{ei.options.a}
+        </div>
+        <div class="slds-col">
+            <input  type="radio" name={ei.id} value="b" onchange={optionhandler}/> {ei.options.b}
+        </div>
+        <div class="slds-col">
+            <input  type="radio" name={ei.id}  value="c" onchange={optionhandler}/>  {ei.options.c}
+        </div>
+       
+   
+      </div>
+
+</ul>-
+
+</div>
+  </template>
+  <p></p>
+  <p></p>
+        <lightning-button label="save" type="submit" variant="brand" onclick={savemth} 
+        disabled={alldisabled}
+        class="slds-m-around_small"></lightning-button>  
+        <lightning-button label="reset" type="reset" variant="destructive" onclick={resetmth} class="slds-m-around_small"></lightning-button>
+    </lightning-card>
+</form>
+</template>

@@ -1,0 +1,51 @@
+<template>
+   
+    <template if:true={istrue}>
+
+<lightning-layout>
+    <lightning-layout-item size="6">
+        <lightning-card title='formfactor'>
+
+            output:{formfactor}
+        
+               
+        </lightning-card>
+    </lightning-layout-item>
+    <lightning-layout-item size="6">
+        <lightning-card title='formfactor'>
+
+            output:{formfactor}
+        
+               
+        </lightning-card>
+    </lightning-layout-item>
+   
+</lightning-layout>
+        
+    </template>
+
+    <template if:false={istrue}>
+
+        <lightning-layout>
+            <lightning-layout-item size="12">
+                <lightning-card title='formfactor'>
+        
+                    output:{formfactor}
+                
+                       
+                </lightning-card>
+            </lightning-layout-item>
+            <lightning-layout-item size="12">
+                <lightning-card title='formfactor'>
+        
+                    output:{formfactor}
+                
+                       
+                </lightning-card>
+            </lightning-layout-item>
+           
+        </lightning-layout>
+    </template>
+    
+
+</template>

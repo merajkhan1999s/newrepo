@@ -1,0 +1,46 @@
+.main{
+
+    font-size: 20px;
+    max-width: 400px;
+    width: 300px;
+    background-color: black;
+    padding: 10px;
+    margin: 20px auto;
+    border-radius: 20px;
+    border: radius;
+    
+}
+
+.alaram{
+
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: yellow;
+}
+.time{
+    font-size: 30px;
+    color: blue;
+    margin: 20px auto;
+}
+.butt{
+
+    color: black;
+    justify-content: center;
+    padding: 10px;
+    margin: auto;
+
+
+}
+.bu{
+    font-weight: bold;
+    background-color: yellow;
+}
+.tex{
+
+    color: white;
+}
+.ss{
+    margin : 20px auto;
+    display:block;
+}

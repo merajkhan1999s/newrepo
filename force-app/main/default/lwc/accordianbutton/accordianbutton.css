@@ -1,0 +1,22 @@
+.accordian{
+               max-width: 100%;
+                text-align: left;
+                padding: 12px 30px;
+                margin-left: 20px;
+                border:thin;
+                background-color: white;
+
+    }
+.active,.accordian:hover{
+
+    color: blue;
+    background-color: white;
+
+}  
+.accordian::after{
+
+    content:'\005E';
+    font-weight: bold;
+   text-align-last: left;
+
+}

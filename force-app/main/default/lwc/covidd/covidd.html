@@ -1,0 +1,15 @@
+<template>
+    
+   
+    <lightning-card title="COVID DETAILS">
+        <lightning-button label="click" onclick={action} varinat="brand"></lightning-button>
+        <div style="height: 300px;">
+            <lightning-datatable
+                    key-field="date"
+                    data={daat}
+                    columns={Columns}>
+            </lightning-datatable>
+        </div>
+        
+    </lightning-card>
+</template>

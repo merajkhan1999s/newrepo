@@ -1,0 +1,25 @@
+<template>
+    <lightning-card title="MK BOOKS APPLICATION">
+<lightning-input label="search for books" value={query} onchange={handlechnage}></lightning-input>
+<lightning-layout multiple-rows>   
+<template if:true={vall}>
+    <template for:each={vall.items} for:item="book">
+    
+<lightning-layout-item key={book.id} size="3" padding="around-small" >
+    <div class="slds-box slds-p-around_medium slds-text-align_center" >
+        
+    <img src={book.volumeInfo.imageLinks.thumbnail}/><p></p>
+    <div> {book.volumeInfo.authors} </div>
+   
+    
+</div>
+
+
+</lightning-layout-item>
+
+
+</template>
+</template> 
+</lightning-layout>   
+ </lightning-card>
+</template>

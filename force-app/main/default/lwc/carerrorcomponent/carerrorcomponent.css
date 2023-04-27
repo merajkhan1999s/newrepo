@@ -1,0 +1,10 @@
+img{
+
+    height: 80px;
+
+}
+:host>div{
+text-align: center;
+color: tomato;
+font-size: 20px;
+}

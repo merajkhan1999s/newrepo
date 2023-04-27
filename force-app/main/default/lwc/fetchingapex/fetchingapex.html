@@ -1,0 +1,19 @@
+<template>
+    <lightning-card>
+<template if:true={wiredata.data}>
+    <template for:each={wiredata.data} for:item="ss">
+<div key={ss.Id}>
+
+<p>Id---<strong> {ss.Id}</strong></p>
+<p>Phone---<strong> {ss.Phone}</strong></p>
+<p>NAME---<strong> {ss.Name}</strong></p>
+</div>
+
+    </template>
+
+
+</template>
+
+
+    </lightning-card>
+</template>

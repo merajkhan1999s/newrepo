@@ -1,0 +1,21 @@
+<template>
+  <lightning-card>
+
+   <lightning-input type="text" onchange={chng} label="SEARCH PINCODE" ></lightning-input>
+<template if:true={post}>  
+    <template for:each={post} for:item="a">
+<div key={a.Name}>
+
+    <p> {a.Name}</p>
+</div>
+        
+    </template>
+        
+    
+    </template>
+
+<lightning-button label="search" onclick={click}></lightning-button>
+   
+
+  </lightning-card>  
+</template>

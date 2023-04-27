@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="Custom validation in lightning record edit form">
+        <lightning-record-edit-form
+        object-api-name={objectApiName}
+        record-id={recordId}
+        onsubmit={handleSubmit}
+        onsuccess={successHandler}
+        onerror={handleError}
+        >
+      <lightning-input-field field-name={field.name}></lightning-input-field>
+      <lightning-input-field field-name={field.rat} required></lightning-input-field>
+      <lightning-input-field field-name={field.phone}></lightning-input-field>
+
+        <lightning-button class="slds-m-top_small" type="submit" label="Create Account"></lightning-button>
+        </lightning-record-edit-form>
+    </lightning-card>
+</template>

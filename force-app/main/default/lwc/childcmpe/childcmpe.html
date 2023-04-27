@@ -1,0 +1,17 @@
+<template>
+  <lightning-card title="this is the child element">
+    this is the data from the parent
+    <h1>{mesg}  </h1>
+
+  </lightning-card>  
+
+  <lightning-card title="this is with non primitivr data">
+    <template for:each={valu} for:item="ea">
+<p key={ea}>{ea.name}>>{ea.age} </p>
+
+    </template>
+
+
+
+  </lightning-card>
+</template>

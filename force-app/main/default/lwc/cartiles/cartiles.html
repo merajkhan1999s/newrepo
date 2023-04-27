@@ -1,0 +1,26 @@
+<template>
+ <lightning-card title="AVALIABLE CARS" icon-name="standard:account">
+    <div class="slds-p-around_medium wrapper" > 
+
+  
+<template if:true={cardetails.length}>
+<div class="content">  
+
+    <template for:each={cardetails} for:item="ss">
+        <c-carpics car={ss} key={ss.Id} onslelected={handlepic}></c-carpics>
+        
+   
+        </template>
+    </div>
+
+
+</template>
+
+<template if:false={cardetails.length}>
+    <c-carerrorcomponent message="SORRY NO CAR IS AVAILABLE ON THIS SEARCH"> </c-carerrorcomponent>
+
+</template>
+
+</div>
+ </lightning-card>   
+</template>

@@ -1,0 +1,50 @@
+<template>
+    
+  <lightning-card title="multiple puicklist though  GET PICKLISTRECORDTYPEID">
+
+<!-- <lightning-combobox
+
+name="industry"
+value={indvalue}
+options={industryptions}
+onchange={handleinput}
+label="INDUSTRY"
+placeholder="select inustry values" >
+</lightning-combobox> -->
+
+<lightning-combobox
+name="industry"
+label="industry"
+value={indvalue}
+options={industryptions}
+placeholder="select"
+onchange={handleinput}></lightning-combobox>
+
+
+<strong>selected value is : {indvalue}</strong>
+
+
+
+    <lightning-combobox
+    
+    name="rating"
+    value={ratvalue}
+    options={recordOptions}
+    onchange={handleinput}
+    label="RATING"
+    placeholder="select rating values">
+    </lightning-combobox>
+    <strong>selected value is : {ratvalue}</strong>
+
+    
+
+
+
+
+</lightning-card> 
+
+
+
+
+  
+</template>

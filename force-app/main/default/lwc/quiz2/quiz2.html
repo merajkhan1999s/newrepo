@@ -1,0 +1,44 @@
+<template>
+   
+   <lightning-card title="quiz">
+<strong> correct answer selected is >>> {correctanswer} from {myquestons.length} </strong>
+    <form class="box"> 
+        <div>  
+    <template for:each={myquestons} for:item="se">
+    
+
+        <div key={se.id} >                             
+             <strong>  {se.id}  :</strong>    <strong> {se.question} </strong> 
+          
+            <div class="slds-grid slds-gutters">
+                <div class="slds-col">
+                <span>
+                    <input type="radio"  name={se.id} value="a" onchange={hanadle}/>
+                    {se.options.a} </span>
+                </div>
+                <div class="slds-col">
+                <span>
+                    <input type="radio"  name={se.id} value="b" onchange={hanadle}/>
+                    
+                    {se.options.b} </span>
+                </div>
+                <div class="slds-col">
+                <span>
+                    <input type="radio"  name={se.id} value="c" onchange={hanadle} />
+                    {se.options.c} </span>
+                </div>
+                </div>
+   </div>
+ </template> 
+ <div class="slds-grid">   
+    <div class="slds-m-around_small">   
+ <lightning-button label="SAVE" type="submit" onclick={methodsave} variant="brand" ></lightning-button>
+</div>
+<div class="slds-m-around_small"> <lightning-button label="RESET" type="reset" onclick={methodreset}  ></lightning-button> </div>
+</div>
+</div>
+</form>
+
+   </lightning-card> 
+
+</template>
